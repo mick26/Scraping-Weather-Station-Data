@@ -4,7 +4,7 @@
 ### Why?
 
 I was unable to find an API that would retrieve current weather data from the numerous weather stations throughout the country.
-The [Met Eireann web site](www.met.ie) hosts a table containing weather station data that is updated approximately every hour.
+The [Met Eireann web site](http://www.met.ie) hosts a table containing weather station data that is updated approximately every hour.
 
 
 
