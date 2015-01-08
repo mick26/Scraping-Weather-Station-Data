@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Weather Data</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />    
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+
+<body ng-controller="MainCtrl">   
+    
+    <header class="text-center">
+        <h1>Data from Irish Weather Stations</h1>
+    </header>
+
+
+    <div class="row">
+        <!-- Map will be rendered here -->  
+        <div class="col-md-8 col-md-offset-2">
+            <div id="map"></div>
+        </div>
+    </div>
+
+
+    <div class="row table-data">
+        <!-- ==================================================
+        Table Header
+        =================================================== -->
+        <table class="table-services table sorted table-striped table-condensed">
+          <thead>
+            <h2 class="text-center">{{reportDate[0].reportDate}}</h2>
+            <th class="hidden-xs">Location<br/></th>
+            <th>Wind<br/>Direction</th>
+            <th class="hidden-xs">Wind Speed<br/>(kts)</th>
+            <th class="hidden-xs">Weather<br/></th>
+            <th class="hidden-xs">Temp<br/>(deg C)</th>
+            <th class="hidden-xs hidden-sm">Humidity<br/>(%)</th>
+            <th class="hidden-xs hidden-sm">Rain<br/>(mm)</th>
+            <th>Pressure<br/>(hPa)</th>
+          </thead>
+
+
+          <!-- ==================================================
+          Table Body
+          =================================================== -->  
+          <tbody>
+
+            <!-- <tr ng-repeat="item in dataAy | filter:search track by $index" > -->
+            <tr ng-repeat="item in dataAy track by $index" >
+
+                <td>{{item.location}}
+                </td>
+
+                <td class="hidden-xs">{{item.windDirection}}
+                </td>
+                
+                <td><span class="label label-default">{{item.windSpeed}}</span>
+                </td>
+
+                <td><span class="label label-danger">{{item.weather}}</span>
+                </td>
+
+                <td class="result-error hidden-xs">{{item.temp}}
+                </td>
+
+                <td class="result-warning hidden-sm"><span class="label label-warning">{{item.humidity}}</span>
+                </td>
+
+                <td><span class="label label-default">{{item.rain}}</span>
+                </td>
+
+                <td>{{item.pressure}}
+                </td>
+
+              </tr>
+          </tbody>   
+        </table>
+
+    </div> <!-- @END/ .row -->
+
+
+    <!-- JS -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/leaflet/dist/leaflet.js"></script>    
+    <script src="bower_components/socket.io-client/socket.io.js"></script>  
+    <!-- Brian Fords module for using Socket.io with Angular -->  
+    <script type="text/javascript" src="bower_components/angular-socket-io/socket.js"></script>   
+    <script src="js/app.js"></script>
+    <script src="js/controllers/controllers.js"></script>
+    <script src="js/services/services.js"></script>
+    <script src="js/services/stations.js"></script>
+
+
+</body>
+</html>
