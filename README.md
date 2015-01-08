@@ -46,6 +46,17 @@ The data for the map is contained in [Geo JSON](http://geojson.org/) format insi
 - node server.js
 - browse to _http://localhost:3000/_
 
+
+## Screen Shots
+
+
+<div align="center">
+		<img width="100%" src="screen-shots/weather1.png" alt="Weather Stations" title="Weather Stations"</img>
+</div>
+<div align="center">
+		<img width="100%" src="screen-shots/weather2.png" alt="Weather Station Data" title="Weather Station Data"</img>
+</div>
+
 <hr>
 
 

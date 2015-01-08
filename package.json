@@ -1,8 +1,8 @@
 {
-  "name": "Parse-XBRL-data-Node",
+  "name": "Scrape-Weather-data",
   "version": "0.0.1",
   "author": "Michael Cullen",
-  "description": "Parse XBRL data with Node",
+  "description": "Scrape Irish Weather Station Data with Node",
   "private": true,
   "scripts": {
     "start": "node server.js"
